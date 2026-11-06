@@ -2,29 +2,38 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Scratch Project Embed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Fullscreen Embed</title>
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
         }
-        .scratch-container {
-            border: 4px solid #4a90e2;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            background: #fff;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="scratch-container">
-        <iframe src="https://scratch.mit.edu/projects/1425194040/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <div class="container">
+        <iframe src="https://scratch.mit.edu/projects/1425194040/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </div>
 
 </body>
